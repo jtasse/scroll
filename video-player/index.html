@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Hidden UI Video Player with Sound Toggle</title>
+		<link rel="stylesheet" href="player.css" />
+	</head>
+	<body>
+		<!-- Sound Toggle -->
+		<div id="controls">
+			<button id="soundToggle">🔇 Sound OFF</button>
+			<span id="soundHint" aria-live="polite">
+				⭠ Click or press 'M' to toggle sound on and off
+			</span>
+			<button id="playPauseToggle" class="paused" aria-label="Play"></button>
+		</div>
+
+		<div class="spacer-90vh">
+			<span id="scrollHint">
+				Scroll with your mouse wheel or arrow keys (<span class="keycap"
+					>↑</span
+				>
+				/
+				<span class="keycap">↓</span>)
+			</span>
+		</div>
+
+		<video id="myVideo" muted playsinline>
+			<source src="../assets/jinx-ekko-short.mp4" type="video/mp4" />
+			Your browser does not support HTML5 video.
+		</video>
+
+		<div class="spacer-120vh"></div>
+
+		<script src="player.js"></script>
+	</body>
+</html>

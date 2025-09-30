@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Hidden UI Video Player with Sound Toggle</title>
+		<link rel="stylesheet" href="player.css" />
+	</head>
+	<body>
+		<!-- Controls -->
+		<div id="controls">
+			<button id="soundToggle">🔇 Sound OFF</button>
+			<span id="soundHint" aria-live="polite">
+				⭠ Click or press 'M' to toggle sound on and off
+			</span>
+			<button id="playPauseToggle" class="paused" aria-label="Play"></button>
+		</div>
+
+		<div class="hintsContainer">
+			<div id="scrollHint">
+				Scroll with your mouse wheel or UP/DOWN arrow keys (<span class="keycap"
+					>↑</span
+				>
+				/ <span class="keycap">↓</span>)
+			</div>
+			<div id="scrubHint">
+				Scrub (move forward and backward) by left-clicking and dragging content
+				or with LEFT/RIGHT arrow keys (<span class="keycap">←</span> /
+				<span class="keycap">→</span>)
+			</div>
+		</div>
+
+		<!-- Video -->
+		<video id="myVideo" muted playsinline>
+			<source src="../assets/jinx-ekko-short.mp4" type="video/mp4" />
+			Your browser does not support HTML5 video.
+		</video>
+
+		<!-- Scrub UI elements -->
+		<div id="scrubBar" aria-hidden="true"></div>
+		<div id="scrubTime" aria-hidden="true"></div>
+
+		<!-- Timecodes below video -->
+		<div id="timecodes" aria-hidden="true">
+			<div id="timecodeStart">00:00</div>
+			<div id="timecodeEnd">00:00</div>
+		</div>
+
+		<div class="spacer-120vh"></div>
+
+		<script src="player.js"></script>
+	</body>
+</html>

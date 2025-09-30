@@ -1,0 +1,10 @@
+body {
+	height: 3000px; /* for scrolling */
+	margin: 0;
+	font-family: sans-serif;
+}
+
+video {
+	display: block;
+	margin: 20px auto;
+}

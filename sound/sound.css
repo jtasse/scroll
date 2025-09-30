@@ -1,0 +1,60 @@
+#click_anywhere {
+	font-size: medium;
+}
+#animatedBox {
+	position: fixed;
+	top: 50;
+	left: 0;
+	width: 100%;
+	height: 200px;
+	background: black;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	z-index: 10;
+}
+
+#arrow {
+	color: white;
+	font-size: 2rem;
+	transform: translateX(0);
+	transition: transform 0.1s linear;
+	white-space: nowrap;
+}
+
+#animatedBox.animate {
+	animation: growAndFade 2s forwards;
+}
+
+p {
+	font-size: 72px;
+	position: relative;
+}
+
+/* Animate right */
+.animate-right {
+	animation: moveRight 2s;
+}
+
+/* Animate left */
+.animate-left {
+	animation: moveLeft 2s;
+}
+
+@keyframes moveRight {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(200px);
+	}
+}
+
+@keyframes moveLeft {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-200px);
+	}
+}

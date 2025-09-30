@@ -1,0 +1,36 @@
+@keyframes flip-image {
+	from {
+		transform: rotate(0deg) scale(1); /* Starting position */
+	}
+	to {
+		transform: rotate(180deg) scale(2);
+	}
+}
+
+@keyframes wash-image {
+	from {
+		filter: grayscale(0%) brightness(100%); /* Starting position */
+	}
+	to {
+		filter: grayscale(100%) brightness(150%); /* Ending position (moves up) */
+	}
+}
+
+#progress {
+	background-image: url("C:\\dev\\github\\animations\\flip sunset\\sunset.jpg");
+	background-size: cover;
+	background-position: center left;
+	position: fixed;
+	left: 0;
+	top: 25;
+	width: 100%;
+	height: 35%;
+	transform-origin: center;
+	animation: flip-image auto linear, wash-image;
+	animation-timeline: scroll();
+}
+
+p {
+	font-size: 72;
+	position: relative;
+}
